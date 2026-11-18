@@ -1,0 +1,27 @@
+{
+  "name": "credifit-backend",
+  "version": "1.0.0",
+  "description": "CrediFit - Admission Stage-Wise Screening Register Backend API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test-suite.js",
+    "test:all": "powershell -ExecutionPolicy Bypass -File run-tests.ps1",
+    "admin:setup": "node scripts/setup-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.5"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+build/
+.vite/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Database backups
+*.sql
+
+# Private uploads
+uploads/*
+!uploads/.gitkeep
+storage/uploads/*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

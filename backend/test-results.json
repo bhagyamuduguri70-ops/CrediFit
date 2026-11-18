@@ -1,0 +1,187 @@
+[
+  {
+    "testName": "Health Check & DB Connectivity (/health)",
+    "status": "PASS",
+    "details": "Status: ok, Database: connected"
+  },
+  {
+    "testName": "User Registration (POST /auth/register)",
+    "status": "PASS",
+    "details": "Registered user ID: 139, Role: APPLICANT"
+  },
+  {
+    "testName": "Applicant Login (POST /auth/login)",
+    "status": "PASS",
+    "details": "Logged in as Audit Test Applicant"
+  },
+  {
+    "testName": "ADMIN Login (POST /auth/login)",
+    "status": "PASS",
+    "details": "Token issued for admin@credifit.demo"
+  },
+  {
+    "testName": "ADMISSION_OFFICER Login (POST /auth/login)",
+    "status": "PASS",
+    "details": "Token issued for officer1@credifit.demo"
+  },
+  {
+    "testName": "EVALUATOR Login (POST /auth/login)",
+    "status": "PASS",
+    "details": "Token issued for evaluator1@credifit.demo"
+  },
+  {
+    "testName": "Get Current User (GET /auth/me)",
+    "status": "PASS",
+    "details": "Retrieved profile for Audit Test Applicant"
+  },
+  {
+    "testName": "Update Applicant Profile (PUT /applicants/profile)",
+    "status": "PASS",
+    "details": "Profile updated successfully."
+  },
+  {
+    "testName": "Add Education Record (POST /applicants/education)",
+    "status": "PASS",
+    "details": "Stored: 85% aggregate"
+  },
+  {
+    "testName": "List Education Records (GET /applicants/education)",
+    "status": "PASS",
+    "details": "Found 1 qualification(s)"
+  },
+  {
+    "testName": "List Active Catalog Programmes (GET /courses/programmes)",
+    "status": "PASS",
+    "details": "Retrieved 3 programmes (e.g. BBA, BCOM, BCA)"
+  },
+  {
+    "testName": "Get Programme Details & Document Checklist (GET /courses/programmes/:id)",
+    "status": "PASS",
+    "details": "Bachelor of Business Administration: 5 required doc types"
+  },
+  {
+    "testName": "List Admission Cycles (GET /courses/cycles)",
+    "status": "PASS",
+    "details": "Retrieved 1 cycles"
+  },
+  {
+    "testName": "Stage 1 - Create Application Draft (POST /applications)",
+    "status": "PASS",
+    "details": "Application ID: 132, Ref: CF-2026-53366"
+  },
+  {
+    "testName": "Stage 1 - Submit Application (POST /applications/:id/submit)",
+    "status": "PASS",
+    "details": "Advanced to Stage 2 (Document Verification)"
+  },
+  {
+    "testName": "Get Document Types (GET /documents/types)",
+    "status": "PASS",
+    "details": "Retrieved 5 document types"
+  },
+  {
+    "testName": "Stage 2 - Upload Document (POST /documents/upload)",
+    "status": "PASS",
+    "details": "Document ID: 4, File: 12th_Marksheet.pdf"
+  },
+  {
+    "testName": "Get Application Documents (GET /documents/application/:id)",
+    "status": "PASS",
+    "details": "Retrieved 1 document(s)"
+  },
+  {
+    "testName": "Stage 2 - Document Verification Review (POST /documents/:id/review)",
+    "status": "PASS",
+    "details": "Decision: VERIFIED, AllMandatoryVerified: false"
+  },
+  {
+    "testName": "Stage 3 - Eligibility Screening (POST /screening/eligibility/:id)",
+    "status": "PASS",
+    "details": "Result: ELIGIBLE (85% vs cutoff 50%)"
+  },
+  {
+    "testName": "Get Eligibility Evaluation (GET /screening/eligibility/:id)",
+    "status": "PASS",
+    "details": "Status: ELIGIBLE, Itemized checks: 1"
+  },
+  {
+    "testName": "Stage 4 - Assign Faculty Evaluator (POST /screening/assign-evaluator)",
+    "status": "PASS",
+    "details": "Evaluator Evaluator One assigned successfully."
+  },
+  {
+    "testName": "Stage 4 - Evaluator Queue (GET /screening/evaluator/assignments)",
+    "status": "PASS",
+    "details": "Found 4 assigned applications"
+  },
+  {
+    "testName": "Stage 4 - Load Scoring Rubric (GET /screening/rubrics/programme/:id)",
+    "status": "PASS",
+    "details": "BBA Department Evaluation Rubric (4 weighted criteria)"
+  },
+  {
+    "testName": "Stage 4 - Department Merit Review (POST /screening/department-review/:id)",
+    "status": "PASS",
+    "details": "Submitted RECOMMEND; Advanced to Stage 5"
+  },
+  {
+    "testName": "Stage 5 - Final Admission Decision (POST /admission/:id/decision)",
+    "status": "PASS",
+    "details": "Decision recorded: ADMITTED"
+  },
+  {
+    "testName": "Get Final Admission Certificate (GET /admission/:id)",
+    "status": "PASS",
+    "details": "Decision: ADMITTED, Programme: Bachelor of Business Administration"
+  },
+  {
+    "testName": "Raise Clarification Request (POST /clarifications)",
+    "status": "PASS",
+    "details": "Clarification ID: 4"
+  },
+  {
+    "testName": "Respond to Clarification Request (POST /clarifications/:id/respond)",
+    "status": "PASS",
+    "details": "Clarification response sent successfully."
+  },
+  {
+    "testName": "Get User Notifications (GET /notifications)",
+    "status": "PASS",
+    "details": "Retrieved 4 notifications"
+  },
+  {
+    "testName": "Mark Notification as Read (PATCH /notifications/:id/read)",
+    "status": "PASS",
+    "details": "Notification marked read"
+  },
+  {
+    "testName": "ADMIN Dashboard Metrics (GET /api/v1/dashboard/admin)",
+    "status": "PASS",
+    "details": "Dashboard metrics calculated and returned"
+  },
+  {
+    "testName": "ADMISSION_OFFICER Dashboard Metrics (GET /api/v1/dashboard/officer)",
+    "status": "PASS",
+    "details": "Dashboard metrics calculated and returned"
+  },
+  {
+    "testName": "EVALUATOR Dashboard Metrics (GET /api/v1/dashboard/evaluator)",
+    "status": "PASS",
+    "details": "Dashboard metrics calculated and returned"
+  },
+  {
+    "testName": "APPLICANT Dashboard Metrics (GET /api/v1/dashboard/applicant)",
+    "status": "PASS",
+    "details": "Dashboard metrics calculated and returned"
+  },
+  {
+    "testName": "List System Users (GET /users)",
+    "status": "PASS",
+    "details": "Found 50 users in database"
+  },
+  {
+    "testName": "List System Audit Logs (GET /users/audit-logs)",
+    "status": "PASS",
+    "details": "Retrieved 78 audit entries"
+  }
+]
